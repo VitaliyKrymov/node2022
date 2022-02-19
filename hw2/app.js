@@ -14,11 +14,17 @@ app.set('views', path.join(__dirname,'static'));
 
 const users = [];
 let err = '';
+console.log('server work');
+
+app.get('/welcome',(req,res) =>{
+    res.send('Welcome on server')
+})
 
 app.get('/login',(req,res)=>{res.render('login')})
 
-
-app.listen(5200,()=>{console.log('Server started')});
+app.listen(5200,()=>{
+    console.log('Server started on port 5200');
+});
 
 
 
