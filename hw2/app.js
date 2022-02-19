@@ -16,14 +16,14 @@ const users = [];
 let err = '';
 console.log('server work');
 
-app.get('/welcome',(req,res) =>{
+app.get('/',(req,res) =>{
     res.send('Welcome on server')
 })
 
 app.get('/login',(req,res)=>{res.render('login')})
 
-app.listen(5200,()=>{
-    console.log('Server started on port 5200');
+app.listen(5100,()=>{
+    console.log('Server started on port 5100');
 });
 
 
