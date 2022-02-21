@@ -37,11 +37,13 @@ app.post('/login', ({ body }, res) => {
   }
 
   users.push({ ...body, id: users.length ? users[users.length - 1].id + 1 : 1 });
+  // console.log(users[users.length - 1].id);
   res.redirect('/users');
 });
 
 app.get('/users', ({ query }, res) => {
   if (Object.keys(query).length) {
+    // console.log(Object.keys(query).length)
     let usersArray = [...users];
     if (query.city) {
       usersArray = usersArray.filter(user => user.city === query.city);
